@@ -1,4 +1,4 @@
-CREATE DATABASE ID NOT EXISTS pizzaria_delivery;
+CREATE DATABASE IF NOT EXISTS pizzaria_delivery;
 USE pizzaria_delivery;
 
 CREATE TABLE produtos (
@@ -15,7 +15,7 @@ CREATE TABLE pedidos (
     cliente_nome VARCHAR(100) NOT NULL,
     cliente_telefone VARCHAR(20) NOT NULL,
     cliente_endereco TEXT NOT NULL,
-    data_pedido DATATIME DEFAULT CURRENT_TIMESTAMP,
+    data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
     total DECIMAL(10, 2),
     status VARCHAR(50) DEFAULT 'Recebido'
 );
